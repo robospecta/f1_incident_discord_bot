@@ -1,6 +1,7 @@
 import logging
 import os
 import discord
+from dotenv import load_dotenv
 from discord.ext import commands
 from discord import app_commands
 from discord.utils import setup_logging
@@ -15,6 +16,9 @@ import yaml
 
 # First, setup logging
 setup_logging(level=logging.INFO)  # you can also use DEBUG, WARNING, etc.
+
+# Load from .env file if needed
+load_dotenv()
 
 # Now get a logger instance
 logger = logging.getLogger(__name__)  # typically use __name__ for module/class
